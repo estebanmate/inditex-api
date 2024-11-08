@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <changeSet author="esteban.martin" id="2 Inserted data in table prices">
+    <!-- Validations -->
+    <preConditions>
+      <tableExists tableName="PRICES"/>
+    </preConditions>
+    <!-- Create Table -->
+    <sql>
+      INSERT INTO PRICES
+      VALUES (1, 1, '2020-06-14 00:00:00', '2020-12-31 23:59:59', 35455, 0, 35.50, 'EUR'),
+             (2, 1, '2020-06-14 15:00:00', '2020-06-14 18:30:00', 35455, 1, 25.45, 'EUR'),
+             (3, 1, '2020-06-15 00:00:00', '2020-06-15 11:00:00', 35455, 1, 30.50, 'EUR'),
+             (4, 1, '2020-06-15 16:00:00', '2020-12-31 23:59:59', 35455, 1, 38.95, 'EUR'),
+             (5, 2, '2020-06-14 00:00:00', '2020-12-31 23:59:59', 35489, 0, 35.50, 'EUR'),
+             (6, 2, '2020-06-14 15:00:00', '2020-06-14 18:30:00', 35489, 1, 25.45, 'EUR'),
+             (7, 3, '2020-06-15 00:00:00', '2020-12-31 11:00:00', 39625, 0, 30.50, 'EUR'),
+             (8, 3, '2020-06-15 16:00:00', '2020-07-01 23:59:59', 39625, 1, 38.95, 'EUR');
+    </sql>
+    <comment>Inserted new records in table 'PRICES'</comment>
+  </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "b2d13641-4667-48c4-9b48-abc552f24399",
+		"name": "INDITEX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29298654"
+	},
+	"item": [
+		{
+			"name": "Get Price",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 35455,\r\n    \"brandId\": 1,\r\n    \"priceDate\": \"2020-06-15 09:59:59\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"price"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
